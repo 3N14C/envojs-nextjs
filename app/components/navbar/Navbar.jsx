@@ -1,49 +1,23 @@
-"use client";
-
+'use client'
+import MediaQuery from "react-responsive";
+import { Mobile } from "./screens/adaptive/Mobile";
+import { Normal } from "./screens/normal/Normal";
 import { Nunito_Sans } from "next/font/google";
-import styles from "./navbar.module.scss";
-import Link from "next/link";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
 });
 
 const Navbar = () => {
-  const handleScroll = (e) => {
-    e.preventDefault();
-
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <div className="">
-      <div className={`${styles.navbar} ${nunito.className}`}>
-        <Link className={`${styles.navbar_link}`} href="/">
-          Hom
-        </Link>
+    <div className={nunito.className}>
+      <MediaQuery minWidth={576}>
+        <Normal />
+      </MediaQuery>
 
-        <Link
-          onClick={handleScroll}
-          className={`${styles.navbar_link}`}
-          href="#services"
-        >
-          Services
-        </Link>
-
-        <Link onClick={handleScroll} className={`${styles.navbar_link}`} href="#projects">
-          Our Project
-        </Link>
-
-        <Link onClick={handleScroll} className={`${styles.navbar_link}`} href="#about">
-          About us
-        </Link>
-      </div>
+      <MediaQuery maxWidth={576}>
+        <Mobile />
+      </MediaQuery>
     </div>
   );
 };

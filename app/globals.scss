@@ -4,52 +4,8 @@
     position: relative;
     padding: 30px 80px 0 80px;
     background-color: #19191B;
-    overflow-x: hidden;
 
-
-    .header {
-        // background-color:#000;
-        // position: fixed;
-        // padding-top: 30px;
-        // padding-bottom: 30px;
-        // top: 0;
-        // right: 0;
-        // left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        backdrop-filter: blur(20%);
-
-        
-
-        .header_inner {
-            display: flex;
-            align-items: center;
-            
-        }
-
-        .header_btn {
-            display: flex;
-            align-items: center;
-            backdrop-filter: blur(1px);
-            // margin-right: 80px;
-
-            .btn {
-                color: #FFF;
-                font-size: 15.619px;
-                font-weight: 400;
-                letter-spacing: -0.332px;
-                border: 0.664px solid #FFF;
-                padding: 10px 35px;
-                border-radius: 3.318px;
-                transition: all .2s linear;
-
-                &:hover {
-                    background-color: #fff;
-                    color: #19191B;
-                    box-shadow: 0px 2px 20px #fff;
-                }
-            }
-        }
+    @media (max-width: 415px) {
+        padding: 45px 25px 0 25px;
     }
 }

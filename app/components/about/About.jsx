@@ -1,20 +1,21 @@
-import Image from "next/image";
-import styles from "./about.module.scss";
+"use client";
+
+import MediaQuery from "react-responsive";
+import { Normal } from "./screens/normal/Normal";
+import { Mobile } from "./screens/adaptive/Mobile";
 
 const About = () => {
   return (
-    <div id="about" className={`${styles.about}`}>
-      <div className={`${styles.about_flex}`}>
-        <p className={`${styles.about_title}`}>Why Enver Is The Best Choice?</p>
-        <p className={`${styles.about_text}`}>
-          Watch this one minute video so you understand why you should use our
-          services!
-        </p>
-      </div>
+    <>
+      <MediaQuery minWidth={576}>
+        <Normal />
+      </MediaQuery>
 
-      
-    </div>
-  );
+      <MediaQuery maxWidth={576}>
+        <Mobile />
+      </MediaQuery>
+    </>
+  )
 };
 
 export { About };
