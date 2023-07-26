@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className="">
       <div className={`${styles.navbar} ${nunito.className}`}>
         <Link className={`${styles.navbar_link}`} href="/">
-          Home
+          Hom
         </Link>
 
         <Link
