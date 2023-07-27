@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 import { Normal } from "./screens/normal/Normal";
 import { Mobile } from "./screens/adaptive/Mobile";
 
-const About = () => {
+export default function About () {
   return (
     <>
       <MediaQuery minWidth={576}>
@@ -17,5 +17,3 @@ const About = () => {
     </>
   )
 };
-
-export { About };

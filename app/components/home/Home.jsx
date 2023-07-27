@@ -3,8 +3,7 @@ import MediaQuery from "react-responsive";
 import { Normal } from "./screens/normal/Normal";
 import { Mobile } from "./screens/adaptive/Mobile";
 
-const Home = () => {
-  
+export default function Home () {
 
   return (
     <>
@@ -19,4 +18,4 @@ const Home = () => {
   );
 };
 
-export { Home };
+// export { Home };
